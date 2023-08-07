@@ -12,10 +12,9 @@ app.post('/', (request, response)=>{
 });
 
 // GET /product/688-nike-large-white-shoe HTTP/1.1
-app.get('/products/:productId-:productName', (request, response) => {
+app.get('/products/all/:pageNum-:sort-:order', (request, response) => {
 	response.send(
-		'Product Page! Product Name: ' + request.params.productName + 
-		'Product ID: ' + request.params.productId,
+		'GET Products: ' + request.params.pageNum + ', ' + request.params.sort + ', ' + request.params.order
 	);
 });
 
