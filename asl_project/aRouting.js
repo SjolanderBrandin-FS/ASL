@@ -2,9 +2,9 @@ const express=require('express');
 const app=express();
 
 // GET /products/all HTTP/1.1
-app.get('/products/all/:pageNum-:sort-:order', (request, response) => {
+app.get('/products/all', (request, response) => {
 	response.send(
-		'GET Products: ' + request.params.pageNum + ', ' + request.params.sort + ', ' + request.params.order
+		'GET Products: ' + request.get('page') + ', ' + request.get('sort') + ', ' + request.get('order')
 	);
 });
 
