@@ -1,6 +1,6 @@
 const Products = require('../models/products')
 
-const index = (req, res)=> {
+const index = (req, res) => {
     const products = Products.all()
     res.json(products);
 }

@@ -1,5 +1,5 @@
-const express=require('express');
-const app=express();
+const express = require('express');
+const app = express();
 
 // GET /products/all HTTP/1.1
 app.get('/products/all', (request, response) => {

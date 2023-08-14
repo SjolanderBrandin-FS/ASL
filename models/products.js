@@ -1,5 +1,5 @@
 let products = [
-    {id: "1", "slug": "nike-shoe", "name": "Nike Shoe"}
+    { id: "1", "slug": "nike-shoe", "name": "Nike Shoe" }
 ]
 
 const all = () => {
@@ -27,4 +27,4 @@ const remove = (id) => {
     return products
 }
 
-module.exports = {all, locate, create, update, remove }
+module.exports = { all, locate, create, update, remove }
