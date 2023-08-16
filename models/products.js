@@ -13,7 +13,7 @@ const locate = (id) => {
 const create = (product) => {
     const id = Number(products[products.length - 1].id) + 1 + ""
     products.push({ id, ...product })
-    return products[product.length - 1]
+    return products[products.length - 1]
 }
 
 const update = (id, product) => {
