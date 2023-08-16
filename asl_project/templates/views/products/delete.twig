@@ -1,5 +1,4 @@
 {% extends 'layouts/base.twig'%}
 {% block main_content %}
-	<p>This is the Delete page content</p>
-	{% include 'views/products/_form.twig' with {'product': product }%}
+	{% include 'views/products/delete.twig' with {'product': product }%}
 {% endblock %}

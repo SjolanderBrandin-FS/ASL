@@ -35,7 +35,7 @@ const update = (req, res) => {
 const remove = (req, res) => {
     const product = Products.remove(req.params.id)
     //res.json(products)
-    res.render('/products/{{product.id}}/delete')
+    res.redirect('/products/' + req.params.id + '/delete');
 }
 
 module.exports = { index, form, show, create, update, remove }
