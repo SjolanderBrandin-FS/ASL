@@ -9,5 +9,5 @@ router.get('/:id/edit', productCtrl.form);
 router.post('/', productCtrl.create);
 router.post('/:id', productCtrl.update);
 router.delete('/:id', productCtrl.remove);
-router.post('/:id/delete', productCtrl.remove);
+router.all('/:id/delete', productCtrl.remove);
 module.exports = router
