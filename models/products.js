@@ -11,20 +11,21 @@ const locate = (id) => {
 }
 
 const create = (product) => {
-    products.push(product)
-    return products
+    const id = Number(products[products.length - 1].id) + 1 + ""
+    products.push({ id, ...product })
+    return products[products.length - 1]
 }
 
 const update = (id, product) => {
-    products = products.map((p) => {
+    product = products.map((p) => {
         return (p.id === id) ? product : p
     })
-    return products
+    return product
 }
 
 const remove = (id) => {
-    products = products.filter(p => p.id !== id)
-    return products
+    product = products.filter(p => p.id !== id)
+    return product
 }
 
 module.exports = { all, locate, create, update, remove }
