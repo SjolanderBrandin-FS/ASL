@@ -17,15 +17,15 @@ const create = (product) => {
 }
 
 const update = (id, product) => {
-    product = products.map((p) => {
+    products = products.map((p) => {
         return (p.id === id) ? product : p
     })
-    return product
+    return products
 }
 
 const remove = (id) => {
-    product = products.filter(p => p.id !== id)
-    return product
+    products = products.filter(p => p.id !== id)
+    return products
 }
 
 module.exports = { all, locate, create, update, remove }
