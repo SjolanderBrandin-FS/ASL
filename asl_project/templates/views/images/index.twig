@@ -3,15 +3,14 @@
 {% block main_content %}
 	<h2>All Products:</h2>
 	<ul>
-		{% for product in products %}
+		{% for image in images %}
 			<li>
-				{{ product.title }}
-				-
-				<a href="/products/{{ product.id }}">Edit</a>
-				<a href="/products/{{ product.id }}/delete">Delete</a>
+				<p>Image: </p>{{ image.id }} -
+				<a href="/images/{{ image.id }}">Edit</a>
+				<a href="/images/{{ image.id }}/delete">Delete</a>
 			</li>
 		{% endfor %}
 		<br/>
-		<a href="/products/new">Create New Products</a>
+		<a href="/images/new">Create New Image</a>
 	</ul>
 {% endblock %}
